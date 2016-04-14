@@ -1,0 +1,36 @@
+version: '2'
+services:
+ php_app:
+  container_name: phpapp
+  dns:
+   - 172.27.172.10
+   - 172.27.172.12
+  build:
+   context: ./
+   dockerfile: Dockerfile-phpapp.dockerfile
+  ports:
+  - "8080:80"
+  depends_on:
+  - mysql_db
+  links:
+  - mysql_db:mysql
+  networks:
+  - mynetworks
+
+ mysql_db:
+  container_name: mysql_db
+  build:
+   context: ./
+   dockerfile: Dockerfile-mysql.dockerfile
+#  image: amolsh/mysql_test
+  volumes:
+  - .:/var/lib/mysql
+  dns:
+   - 172.27.172.10
+   - 172.27.172.12
+  networks:
+  - mynetworks
+ 
+networks:
+    mynetworks:
+      driver: bridge 
