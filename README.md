@@ -13,13 +13,20 @@ Docker compose file is docker-compose.yml in YAML format.
 Docker-compose File Starts with version: '2' tag
 services configurations follows which contain  build, environment variables, image , networks , ports and volumes.
 
-docker-compose commands
+#######docker-compose commands
+
 docker-compose build
+
 docker-compose up
+
 docker-compose down
+
 docker-compose ps
+
 docker-compose stop
+
 docker-compose start
+
 docker-compose rm
 
 docker-compose build mongo #here mongo is one of the services defined in Docker compose file.
