@@ -1,7 +1,7 @@
 # dockercompose
 Install
  
-$ curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+---$ curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 
 $ chmod +x /usr/local/bin/docker-compose
 
@@ -13,7 +13,7 @@ Docker compose file is docker-compose.yml in YAML format.
 Docker-compose File Starts with version: '2' tag
 services configurations follows which contain  build, environment variables, image , networks , ports and volumes.
 
-docker-compose commands
+docker-compose commands 
 docker-compose build
 docker-compose up
 docker-compose down
