@@ -30,11 +30,17 @@ docker-compose start
 docker-compose rm
 
 docker-compose build mongo #here mongo is one of the services defined in Docker compose file.
+
 docker-compose up  # to run the containers according to Docker compose file
+
 docker-compose up -d # to start in daemon mode
+
 docker-compose up --no-deps node   # to only  start a service without its dependencies
+
 docker-compose down  # to shutdown the containers and remove container
+
 docker-compose down --rmi all --volumes # to remove volumes and images along with containers after shutdown.
+
 
 Github link 
 https://github.com/gauravjos/dockercompose
