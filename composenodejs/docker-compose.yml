@@ -4,8 +4,8 @@ services:
   image: madhu25/node2
   ports:
   - "9080:3010"
-  environment:
-   url_name: "172.27.59.67:27017"
+ # environment:
+  # url_name: "172.27.59.67:27017"
   links:
    - mongodb
  mongodb:
